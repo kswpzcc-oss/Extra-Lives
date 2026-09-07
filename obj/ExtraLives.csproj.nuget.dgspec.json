@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\TKF\\Extra Lives\\ExtraLives.csproj": {}
+  },
+  "projects": {
+    "C:\\TKF\\Extra Lives\\ExtraLives.csproj": {
+      "version": "4.1.0",
+      "restore": {
+        "projectUniqueName": "C:\\TKF\\Extra Lives\\ExtraLives.csproj",
+        "projectName": "abcde.ExtraLives",
+        "projectPath": "C:\\TKF\\Extra Lives\\ExtraLives.csproj",
+        "packagesPath": "C:\\Users\\kswpzcc\\.nuget\\packages\\",
+        "outputPath": "C:\\TKF\\Extra Lives\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\TKF\\Extra Lives\\NuGet.Config",
+          "C:\\Users\\kswpzcc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.bepinex.dev/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "framework": "net472",
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net472": {
+          "framework": "net472",
+          "targetAlias": "net472",
+          "dependencies": {
+            "BepInEx.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.*, )"
+            },
+            "BepInEx.Core": {
+              "target": "Package",
+              "version": "[5.*, )"
+            },
+            "BepInEx.PluginInfoProps": {
+              "target": "Package",
+              "version": "[1.*, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
