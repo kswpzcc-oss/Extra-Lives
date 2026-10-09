@@ -278,14 +278,14 @@
   "project": {
     "version": "4.1.0",
     "restore": {
-      "projectUniqueName": "C:\\TKF\\Extra Lives\\ExtraLives.csproj",
+      "projectUniqueName": "F:\\新建文件夹\\Extra-Lives-main\\ExtraLives.csproj",
       "projectName": "abcde.ExtraLives",
-      "projectPath": "C:\\TKF\\Extra Lives\\ExtraLives.csproj",
+      "projectPath": "F:\\新建文件夹\\Extra-Lives-main\\ExtraLives.csproj",
       "packagesPath": "C:\\Users\\kswpzcc\\.nuget\\packages\\",
-      "outputPath": "C:\\TKF\\Extra Lives\\obj\\",
+      "outputPath": "F:\\新建文件夹\\Extra-Lives-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\TKF\\Extra Lives\\NuGet.Config",
+        "F:\\新建文件夹\\Extra-Lives-main\\NuGet.Config",
         "C:\\Users\\kswpzcc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -335,7 +335,7 @@
             "version": "[1.*, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

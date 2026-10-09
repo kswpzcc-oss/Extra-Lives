@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b7Ae3W7Xw3I=",
+  "dgSpecHash": "oJmbH9KqVFo=",
   "success": true,
-  "projectFilePath": "C:\\TKF\\Extra Lives\\ExtraLives.csproj",
+  "projectFilePath": "F:\\新建文件夹\\Extra-Lives-main\\ExtraLives.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kswpzcc\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
     "C:\\Users\\kswpzcc\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",

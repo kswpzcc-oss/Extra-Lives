@@ -37,22 +37,6 @@ namespace ExtraLives.Patches
                 // Only our own death matters - every bot death lands here too.
                 if (!player.IsYourPlayer || player.IsAI) return true;
 
-                if (FikaReviveDetector.IsFikaReviveEnabled(player))
-                {
-                    if (!Plugin.shownFikaReviveNotification)
-                    {
-                        NotificationManager.DisplayMessageNotification(
-                            "Extra Lives功能已禁用：Fika 复活已启用）。",
-                            ENotificationDurationType.Long,
-                            ENotificationIconType.Alert,
-                            Color.yellow);
-                        Plugin.shownFikaReviveNotification = true;
-                    }
-
-                    Plugin.LogSource.LogInfo("Fika revive is enabled; Extra Lives is yielding death handling to Fika.");
-                    return true;
-                }
-
                 // Gave up?
                 if (Plugin.GaveUp) return true;
 
@@ -61,8 +45,22 @@ namespace ExtraLives.Patches
                 // Already downed - a second damage source hitting Kill the same
                 // frame would re-run HideDownedWeapon mid-animation and corrupt
                 // the hands controller. Block the kill, skip re-entering critical.
+                // Checked BEFORE the Fika test: once Extra Lives owns this death,
+                // nothing else may finish the player off underneath us.
                 if (RevivalFeatures.IsPlayerInCriticalState(playerId))
                     return false;
+
+                // Fika wins whenever it actually intercepts this death (it downs the
+                // player so a teammate can revive them). We yield rather than race it,
+                // because HarmonyX runs every prefix unconditionally - returning false
+                // here would NOT stop Fika's prefix from also firing. When Fika will
+                // not down us (solo, teammates all dead, maxRevives used up, or a
+                // headshot/grenade Fika treats as instant kill) we keep our own flow.
+                if (FikaReviveDetector.WillFikaDownPlayer(player))
+                {
+                    Plugin.LogSource.LogInfo("Fika is handling this death (downed state); Extra Lives is yielding.");
+                    return true;
+                }
 
                 var hc = player.ActiveHealthController;
                 var headHealth = hc.GetBodyPartHealth(EBodyPart.Head, false);

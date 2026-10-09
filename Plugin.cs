@@ -12,7 +12,6 @@ namespace ExtraLives
         public static ManualLogSource LogSource;
         public static int CurrentLives;
         public static bool shownDeathNotification = false;
-        public static bool shownFikaReviveNotification = false;
         public static bool GaveUp = false;
 
         private void Awake()

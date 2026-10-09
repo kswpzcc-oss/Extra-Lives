@@ -29,7 +29,6 @@ namespace ExtraLives.Patches
             Plugin.CurrentLives = Settings.PLAYER_LIVES.Value;
             Plugin.GaveUp = false;
             Plugin.shownDeathNotification = false;
-            Plugin.shownFikaReviveNotification = false;
 
             Plugin.LogSource.LogInfo($"Raid started, setting lives to {Plugin.CurrentLives}");
         }
